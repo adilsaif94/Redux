@@ -22,11 +22,11 @@ const MyCart = ({ navigation }) => {
                 <Text style={styles.price}>${item.price}</Text>
                 <View style={styles.quantityContainer}>
                     <TouchableOpacity onPress={() => handleUpdateQuantity(item.id, item.quantity - 1)}>
-                        <MaterialIcons name="remove" size={24} color="#000" />
+                        <MaterialIcons name="remove" size={22} color="#000" />
                     </TouchableOpacity>
                     <Text style={styles.quantity}>{item.quantity}</Text>
                     <TouchableOpacity onPress={() => handleUpdateQuantity(item.id, item.quantity + 1)}>
-                        <MaterialIcons name="add" size={24} color="#000" />
+                        <MaterialIcons name="add" size={22} color="#000" />
                     </TouchableOpacity>
                 </View>
             </View>
@@ -113,13 +113,13 @@ const styles = StyleSheet.create({
     quantityContainer: {
         flexDirection: 'row',
         alignItems: 'center',
-        marginVertical: 10,
         justifyContent:'flex-end'
     },
     quantity: {
-        fontSize: 16,
+        fontSize: 18,
         marginHorizontal: 10,
         color: '#888',
+        fontWeight:'500'
     },
     emptyCartText: {
         fontSize: 18,

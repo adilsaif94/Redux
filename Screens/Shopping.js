@@ -21,6 +21,7 @@ const Shopping = ({navigation}) => {
 
     const handleAddToCart = (product) => {
         dispatch(addToCart(product));
+        setModalVisible(false);
         Toast.show({
             type: 'success',
             text1: 'Item added to cart',
